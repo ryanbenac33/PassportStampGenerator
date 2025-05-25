@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Customize Passport Stamp</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+  /* Center title for Customize Passport Stamp */
+  #customize-passport header h1 {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-tabs">
+    <a href="#" class="nav-tab" data-tab="nps-stamps">NPS Passport Stamps</a>
+    <a href="#" class="nav-tab active" data-tab="customize-passport">Customize Passport Stamp</a>
+    <a href="#" class="nav-tab" data-tab="customize-personal">Customize Personal Stamp</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- NPS Passport Stamps page (empty or placeholder) -->
+  <section id="nps-stamps" class="tab-content" style="display:none;">
+    <header><h1>NPS Passport Stamps</h1></header>
+    <p>Welcome to the NPS Passport Stamps page.</p>
+  </section>
+
+  <!-- Customize Passport Stamp page -->
+  <section id="customize-passport" class="tab-content">
+    <header><h1>Customize Your Passport Stamp</h1></header>
+
+    <div class="content-wrapper">
+      <div class="stamp-container">
+        <div class="stamp" id="stamp">
+          <svg width="200" height="200" viewBox="0 0 200 200">
+            <defs>
+              <path id="circlePath" d="M 100,185
+                                        a 85,85 0 0,1 -85,-85
+                                        a 85,85 0 0,1 170,0
+                                        a 85,85 0 0,1 -85,85" />
+            </defs>
+            <text dy="-0.3em">
+              <textPath
+                href="#circlePath"
+                id="selectedNationalParkPath"
+                startOffset="50%"
+                text-anchor="middle"
+                font-size="15"
+                fill="black"
+                font-weight="300"
+                style="dominant-baseline: middle;"
+              >
+                Your Text Goes Here
+              </textPath>
+            </text>
+          </svg>
+
+          <div class="stamp-text">
+            <span id="visitDate"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <label for="nationalPark">Select a National Park:</label>
+        <select id="nationalPark" name="nationalPark"></select>
+
+        <label for="visitDateInput">Visit Date:</label>
+        <input type="date" id="visitDateInput" name="visitDate" />
+
+        <label for="stampColor">Stamp Color:</label>
+        <input type="color" id="stampColor" name="stampColor" value="#000000" />
+
+        <label for="fontSelect">Select Font:</label>
+        <select id="fontSelect" name="fontSelect">
+          <option value="Arial, sans-serif" selected>Arial</option>
+          <option value="'Times New Roman', serif">Times New Roman</option>
+          <option value="Georgia, serif">Georgia</option>
+          <option value="'Courier New', monospace">Courier New</option>
+          <option value="Verdana, sans-serif">Verdana</option>
+          <option value="'Lucida Console', monospace">Lucida Console</option>
+        </select>
+
+        <button class="submit-button" type="button" id="downloadButton">Download Cancellation Stamp</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customize Personal Stamp page -->
+  <section id="customize-personal" class="tab-content" style="display:none;">
+    <header><h1>Customize Your Personal Stamp</h1></header>
+
+    <div class="content-wrapper">
+      <div class="stamp-container">
+        <div class="stamp" id="personalStamp">
+          <svg width="200" height="200" viewBox="0 0 200 200">
+            <defs>
+              <path id="personalCirclePath" d="M 100,185
+                                               a 85,85 0 0,1 -85,-85
+                                               a 85,85 0 0,1 170,0
+                                               a 85,85 0 0,1 -85,85" />
+            </defs>
+            <text dy="-0.3em">
+              <textPath
+                href="#personalCirclePath"
+                id="personalTextPath"
+                startOffset="50%"
+                text-anchor="middle"
+                font-size="15"
+                fill="black"
+                font-weight="300"
+                style="dominant-baseline: middle;"
+              >
+                Your Text Goes Here
+              </textPath>
+            </text>
+          </svg>
+
+          <div class="stamp-text">
+            <span id="personalVisitDate"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <label for="personalText">Enter Text:</label>
+        <input type="text" id="personalText" name="personalText" placeholder="Enter your text here" />
+
+        <label for="personalVisitDateInput">Visit Date:</label>
+        <input type="date" id="personalVisitDateInput" name="personalVisitDate" />
+
+        <label for="personalStampColor">Stamp Color:</label>
+        <input type="color" id="personalStampColor" name="personalStampColor" value="#000000" />
+
+        <label for="personalFontSelect">Select Font:</label>
+        <select id="personalFontSelect" name="personalFontSelect">
+          <option value="Arial, sans-serif" selected>Arial</option>
+          <option value="'Times New Roman', serif">Times New Roman</option>
+          <option value="Georgia, serif">Georgia</option>
+          <option value="'Courier New', monospace">Courier New</option>
+          <option value="Verdana, sans-serif">Verdana</option>
+          <option value="'Lucida Console', monospace">Lucida Console</option>
+        </select>
+
+        <button class="submit-button" type="button" id="downloadPersonalButton">Download Personal Stamp</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 - Passport Stamp Generator
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
