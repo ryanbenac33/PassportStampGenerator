@@ -6,9 +6,32 @@
 
  -  Load National Parks from a CSV file
  -  Automatically color stamps based on the state of the selected park
- -  Customize visit dates
- -  Choose from multiple fonts
+ -  Customize visit dates, line color, and font
  -  Download the stamp as an SVG
+ -  Customize your own text and download as an SVG
+
+
+ ## 🎖️ Using the National Site Stamp Generator
+ The application runs as an index.html file with supporting css and js. The HTML file handles all customization and downloading SVGs to your local device. The first tab, "Customize Passport Stamp", provides a dropdown to select the national site and customize before downloading. 
+
+ ### User Inferface: 
+ ![user interface to create national park stamps](images/Customize_Passport_Stamp.png)
+
+ ### Downloaded SVGs: 
+ ![Katmai National Park Stamp](images/passport_stamp_Katmai_National_Park.svg)
+ ![Yellowstone National Park Stamp](images/passport_stamp_Yellowstone_National_Park.svg)
+
+
+ ## 🎖️ Customizing a Stamp
+ The second tab in the interface, "Cutomize Personal Stamp", provides a text field for users to generate their own stamp and download as an SVG. 
+
+ ### User Interface: 
+ ![user interface to create national park stamps](images/Customize_Personal_Stamp.png)
+
+ ### Downloaded SVGs:
+ ![user interface to create national park stamps](images/personal_stamp_Mississippi_River_National_Museum.svg)
+
+
 
  ## 📁 Project Structure
 
@@ -17,6 +40,8 @@
  ├── script.js          # Handles CSV parsing, UI logic, and SVG rendering  
  ├── style.css          # Core styling  
  ├── national_sites.csv # CSV file with National Park and State info  
+ ├── README.md          # Additional information about this repository and use of interfaces  
+ ├── images             # Supporting images for README file  
 
 
  ## 📊 CSV Format
@@ -29,7 +54,7 @@ Park Name,State
  ...
 
 
- ## 🚀 Getting Started
+ ## 🚀 Getting Started with Repository
 
  1. Clone the repository:
 
