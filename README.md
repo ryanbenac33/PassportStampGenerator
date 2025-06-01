@@ -77,7 +77,7 @@ Park Name,State
 
  - No external libraries required
  - Vanilla HTML, CSS, JavaScript
- - To utilize the Python Wikipedia scrape of National Park units, depeniencies are: requests, Pandas (bs4), BeautifulSoup, csv
+ - To utilize the Python Wikipedia scrape of National Park units, dependencies are: requests, Pandas (bs4), BeautifulSoup, csv
 
  ## 📝 License
 
